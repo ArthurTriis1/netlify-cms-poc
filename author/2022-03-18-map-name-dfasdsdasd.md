@@ -1,4 +1,4 @@
 ---
 name: Author 1
-posts: lala
+posts: post 2
 ---
