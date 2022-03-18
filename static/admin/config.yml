@@ -2,6 +2,7 @@ backend:
   name: github
   repo: ArthurTriis1/netlify-cms-poc
   branch: main
+  site_domain: netlify-cms-poc-arthur.netlify.app
 
 publish_mode: editorial_workflow
 local_backend: true
