@@ -1,17 +1,57 @@
 backend:
   name: github
   repo: ArthurTriis1/netlify-cms-poc
+  branch: main
 
+publish_mode: editorial_workflow
 local_backend: true
 media_folder: static/img
 public_folder: /img
 
-collections: 
-    - name: "pages"
-      label: "Pages"
-      files:
-        - file: "src/markups/index.md"
-          label: "Landing Page"
-          name: "index"
-          fields:
-            - { label: Title, name: title, widget: string }
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "image", name: "thumbnail", widget: "image" }
+
+  - name: "author"
+    label: "Author"
+    folder: "author"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { 
+          label: "Posts",
+          name: "posts",
+          widget: "relation",
+          collection: "posts",
+          search_fields: ["title", "description"],
+          value_field: "{{slug}}",
+          displayFields: ["title", "description"]
+      }
+
+    
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/markups/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: "image", name: "image", widget: "image" }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: "Location", name: "location", widget: "map" }
+          - { label: 'Color', name: 'color', widget: 'color' }

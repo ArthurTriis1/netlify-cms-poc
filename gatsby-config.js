@@ -4,5 +4,15 @@ module.exports = {
     title: ``,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-netlify-cms"]
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve:"gatsby-plugin-netlify-cms",       
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    }
+]
 };
