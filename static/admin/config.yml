@@ -1,3 +1,17 @@
 backend:
   name: github
   repo: ArthurTriis1/netlify-cms-poc
+
+local_backend: true
+media_folder: static/img
+public_folder: /img
+
+collections: 
+    - name: "pages"
+      label: "Pages"
+      files:
+        - file: "src/markups/index.md"
+          label: "Landing Page"
+          name: "index"
+          fields:
+            - { label: Title, name: title, widget: string }
