@@ -9,7 +9,7 @@ const index = ({ data }: any)  => {
   const { frontmatter } = data.markdownRemark;
 
 
-  return (<HomeTemplate image={getImage(frontmatter.image)!} title={frontmatter.title} subtitle={frontmatter.subtitle}/>)
+  return (<HomeTemplate image={getImage(frontmatter.image)!} title={frontmatter.title} />)
 }
 
 export default index
@@ -21,7 +21,6 @@ query MyQuery {
   ) {
     frontmatter {
       title
-      subtitle
       image {
         childImageSharp {
           

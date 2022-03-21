@@ -28,13 +28,6 @@ module.exports = {
           },
         },
         {
-          resolve: `gatsby-source-filesystem`,
-          options: {
-            name: `author`,
-            path: `${__dirname}/markups/collections/author`,
-          },
-        },
-        {
           resolve: "gatsby-source-filesystem",
           options: {
             path: `${__dirname}/src/images`,

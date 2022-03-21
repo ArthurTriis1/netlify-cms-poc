@@ -7,15 +7,13 @@ type Image = IGatsbyImageData & {
 
 export type HomeTemplateProps = {
     title: string
-    subtitle: string
     image: Image
 }
 
-const HomeTemplate = ({ title, subtitle, image }: HomeTemplateProps) => {
+const HomeTemplate = ({ title, image }: HomeTemplateProps) => {
     return (
     <div>
         <h1>{title}</h1>
-        <h2>{subtitle}</h2>
 
         { image?.url ? (
           <img

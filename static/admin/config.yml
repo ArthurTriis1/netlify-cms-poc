@@ -16,32 +16,15 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
       - {
-          label: "Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DD hh:mm:ss",
+        label: "Template Key",
+        name: "templateKey",
+        widget: "hidden",
+        default: "posts",
         }
-      - { label: "image", name: "thumbnail", widget: "image" }
-
-  - name: "author"
-    label: "Author"
-    folder: "markups/collections/author"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { 
-          label: "Posts",
-          name: "posts",
-          widget: "relation",
-          collection: "posts",
-          search_fields: ["title", "description"],
-          value_field: "{{slug}}",
-          displayFields: ["title", "description"]
-      }
+      - { label: Title, name: title, widget: string }
+      - { label: Thumb, name: thumb, widget: image }
+      - { label: Text, name: body, widget: markdown }
 
     
   - name: "pages"
@@ -51,8 +34,11 @@ collections:
         label: "Landing Page"
         name: "index"
         fields:
+          - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "index-page",
+            }
           - { label: Title, name: title, widget: string }
-          - { label: "image", name: "image", widget: "image" }
-          - { label: Subtitle, name: subtitle, widget: string }
-          - { label: "Location", name: "location", widget: "map" }
-          - { label: 'Color', name: 'color', widget: 'color' }
+          - { label: Image, name: image, widget: image }
