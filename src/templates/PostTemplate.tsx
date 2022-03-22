@@ -1,6 +1,8 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
+import { Head } from '../components/Header';
 import Image, { ImageProps } from '../components/Image';
+import Layout from '../components/Layout';
 
 export type PostTemplate = {
     title: string
@@ -10,11 +12,11 @@ export type PostTemplate = {
 
 const PostTemplate = ({ title, thumb, html }: PostTemplate) => {
   return (
-    <>
-        <h1 style={{color: 'red'}}>{title}</h1>
+    <Layout>
+        <Head style={{color: 'red'}}>{title}</Head>
         <Image image={thumb}/>
         <div style={{color: 'purple'}} dangerouslySetInnerHTML={{__html: html}}></div>
-    </>
+    </Layout>
     )
 }
 
