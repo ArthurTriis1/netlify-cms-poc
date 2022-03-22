@@ -78,6 +78,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.ts`,
       },
     },
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-netlify"
 ]
 };

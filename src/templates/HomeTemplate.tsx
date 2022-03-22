@@ -1,6 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import { Head } from '../components/Header'
 import Image, { ImageProps } from '../components/Image'
+import Layout from '../components/Layout'
 
 
 
@@ -12,8 +14,8 @@ export type HomeTemplateProps = {
 
 const HomeTemplate = ({ title, image, posts }: HomeTemplateProps) => {
     return (
-    <div>
-        <h1>{title}</h1>
+    <Layout>
+        <Head>{title}</Head>
 
       <Image image={image}/>
 
@@ -23,7 +25,7 @@ const HomeTemplate = ({ title, image, posts }: HomeTemplateProps) => {
         ))
       }
 
-    </div>
+    </Layout>
     )
 }
 
