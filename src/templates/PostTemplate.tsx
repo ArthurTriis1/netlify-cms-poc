@@ -3,6 +3,7 @@ import React from 'react';
 import { Head } from '../components/Header';
 import Image, { ImageProps } from '../components/Image';
 import Layout from '../components/Layout';
+import { Markdown } from '../components/Markdown';
 
 export type PostTemplate = {
     title: string
@@ -13,9 +14,9 @@ export type PostTemplate = {
 const PostTemplate = ({ title, thumb, html }: PostTemplate) => {
   return (
     <Layout>
-        <Head style={{color: 'red'}}>{title}</Head>
+        <Head>{title}</Head>
         <Image image={thumb}/>
-        <div style={{color: 'purple'}} dangerouslySetInnerHTML={{__html: html}}></div>
+        <Markdown dangerouslySetInnerHTML={{__html: html}}></Markdown>
     </Layout>
     )
 }

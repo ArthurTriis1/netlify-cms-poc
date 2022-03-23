@@ -6,10 +6,10 @@ type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => (
-  <div>
+  <>
     <GlobalStyles />
     {children}
-  </div>
+  </>
 )
 
 export default Layout
