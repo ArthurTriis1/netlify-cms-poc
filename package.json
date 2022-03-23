@@ -13,7 +13,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "codegen": "graphql-codegen",
+    "codegen:watch": "graphql-codegen --watch"
   },
   "dependencies": {
     "gatsby": "^4.10.0",
@@ -39,6 +41,9 @@
     "twin.macro": "^2.8.2"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.8",
+    "@graphql-codegen/typescript-operations": "^2.3.5",
     "@types/marked": "^4.0.3",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.39",

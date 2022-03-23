@@ -1,19 +1,18 @@
 import { graphql } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image';
+import { getImage, IGatsbyImageData, ImageDataLike } from 'gatsby-plugin-image';
 import React from 'react'
+import { GetIndexDataQuery } from '../__generated__/graphqlTypes';
 import HomeTemplate from '../templates/HomeTemplate';
 
-const index = ({ data }: any)  => {
+const index = ({ data }: {data: GetIndexDataQuery})  => {
   const { frontmatter } = data.markdownRemark;
 
-  const posts = data.allMarkdownRemark.nodes.map((node: { frontmatter: { title: string; }; fields: { slug: string; }; }) => ({
+  const posts = data.allMarkdownRemark.nodes.map((node) => ({
     title: node.frontmatter.title,
     slug: node.fields.slug
   }))
 
-  console.log(posts)
-
-  return (<HomeTemplate image={getImage(frontmatter.image)!} title={frontmatter.title} posts={posts} />)
+  return (<HomeTemplate image={getImage(frontmatter.image as ImageDataLike)!} title={frontmatter!.title!} posts={posts} />)
 }
 
 export default index

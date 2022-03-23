@@ -1,0 +1,12 @@
+schema: http://localhost:8000/___graphql
+documents:
+  - ./src/**/*.{ts,tsx}
+generates:
+  ./src/__generated__/graphqlTypes.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      avoidOptionals: true
+      skipTypename: true
+      maybeValue: 'T'
