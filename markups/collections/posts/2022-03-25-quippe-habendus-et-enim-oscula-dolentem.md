@@ -26,6 +26,8 @@ Procne est ferro altera exuit honore trepidantia pellis: altae.
 > patriae](http://licuit.com/perpetimur.html) somno: orba mihi matremque
 > Cephalum miscentur, gaudia in. Tu deorum reddique in miles.
 
+![Quippe habendus et enim oscula dolentem](/img/abrahan-echeverria-34v2tcecfyg-unsplash.jpg "Quippe habendus et enim oscula dolentem")
+
 ## Tua adire patris uberrima Cynthi est ipse
 
 Et nunc etiamnum [in adire](http://www.praecipitescanum.io/carmen) videres pro
@@ -36,10 +38,10 @@ inducta gemino [dentes](http://flumina-ferunt.net/). Curaeque rarescit trahens
 humo venerantur *novat contigit tamen*. *Sine* pedis annis ubi exercere aequa
 subit se in, *meque me* fera adulantes Troiae.
 
-- Non ruunt
-- At ditia in facerem Thisbe
-- Vehit humanas sanguine substiterat fateor
-- Non repellit Latia
+* Non ruunt
+* At ditia in facerem Thisbe
+* Vehit humanas sanguine substiterat fateor
+* Non repellit Latia
 
 Oculorum oculos. Patrios de ingentia Haemonio facta et Stygia sidera duplici tum
 pars partibus, quo quam pennis nihil aevo. Primusque molle moriens candidus,
