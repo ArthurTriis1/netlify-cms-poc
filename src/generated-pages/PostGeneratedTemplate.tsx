@@ -36,7 +36,7 @@ query getPostDetailsBySlug($slug: String!) {
       title
       thumb {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }

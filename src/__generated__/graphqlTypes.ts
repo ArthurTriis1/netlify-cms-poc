@@ -3718,4 +3718,4 @@ export type GetPostDetailsBySlugQuery = { markdownRemark: { html: string, frontm
 export type GetIndexDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetIndexDataQuery = { markdownRemark: { frontmatter: { title: string, image: { childImageSharp: { gatsbyImageData: any } } } }, allMarkdownRemark: { nodes: Array<{ frontmatter: { title: string }, fields: { slug: string } }> } };
+export type GetIndexDataQuery = { markdownRemark: { frontmatter: { title: string, image: { childImageSharp: { gatsbyImageData: any } } } }, allMarkdownRemark: { nodes: Array<{ timeToRead: number, frontmatter: { title: string, thumb: { childImageSharp: { gatsbyImageData: any } } }, fields: { slug: string } }> } };

@@ -1,6 +1,28 @@
+import React, { HTMLAttributes } from "react";
 import styled from "styled-components";
+import tw from "twin.macro";
 
-export const Markdown = styled.div`
+const MarkdownWrapper = tw.div`
+    flex
+    items-center
+    w-full
+    flex-col
+    overflow-x-hidden
+`
+    
+
+const MarkdownContent = styled.div`
+    ${tw`
+        w-full
+        p-4
+        md:w-4/5
+    `}
+
+    * {
+        word-break: break-all;
+    }
+
+
     @media print {
     *,
     *:before,
@@ -58,6 +80,7 @@ export const Markdown = styled.div`
     h2,
     h3 {
         page-break-after: avoid;
+
     }
     }
 
@@ -227,3 +250,11 @@ export const Markdown = styled.div`
     color: #2980b9;
     }
 `
+
+
+
+export const Markdown = (props: HTMLAttributes<HTMLDivElement>) => (
+    <MarkdownWrapper>
+        <MarkdownContent {...props} />
+    </MarkdownWrapper>
+)

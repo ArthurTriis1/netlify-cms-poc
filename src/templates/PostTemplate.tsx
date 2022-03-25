@@ -1,6 +1,6 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
-import { Head } from '../components/Header';
+import HeaderImage from '../components/HeaderImage';
 import Image, { ImageProps } from '../components/Image';
 import Layout from '../components/Layout';
 import { Markdown } from '../components/Markdown';
@@ -14,8 +14,7 @@ export type PostTemplate = {
 const PostTemplate = ({ title, thumb, html }: PostTemplate) => {
   return (
     <Layout>
-        <Head>{title}</Head>
-        <Image image={thumb}/>
+        <HeaderImage thumb={thumb} title={title}/>
         <Markdown dangerouslySetInnerHTML={{__html: html}}></Markdown>
     </Layout>
     )
