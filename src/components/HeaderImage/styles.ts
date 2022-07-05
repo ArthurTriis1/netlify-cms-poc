@@ -17,4 +17,5 @@ export const Head = tw.h1`
     backdrop-blur-sm
     backdrop-brightness-50
     text-center
+    
 `
