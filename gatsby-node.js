@@ -17,32 +17,32 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 
 
-  exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
-    return graphql(`
-      query getAllPostsSlugs {
-        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "posts"}}}) {
-          nodes {
-            fields {
-              slug
-            }
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    query getAllPostsSlugs {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "posts"}}}) {
+        nodes {
+          fields {
+            slug
           }
         }
       }
-    `).then((result) => {
-      const posts = result.data.allMarkdownRemark.nodes
-  
-      posts.forEach(({ fields }) => {
-        createPage({
-          path: fields.slug,
-          component: path.resolve(`./src/generated-pages/PostGeneratedTemplate.tsx`),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: fields.slug,
-          },
-        })
+    }
+  `).then((result) => {
+    const posts = result.data.allMarkdownRemark.nodes
+
+    posts.forEach(({ fields }) => {
+      createPage({
+        path: fields.slug,
+        component: path.resolve(`./src/generated-pages/PostGeneratedTemplate.tsx`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: fields.slug,
+        },
       })
-  
     })
-  }
+
+  })
+}

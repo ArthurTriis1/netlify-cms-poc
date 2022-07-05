@@ -8,5 +8,5 @@ export const GImage = tw(GatsbyImage)`
 export const Image = tw.img`
     h-96
     min-w-full
-    object-cover	
+    object-cover
 `
